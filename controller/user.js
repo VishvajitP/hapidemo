@@ -25,3 +25,14 @@ exports.create = {
     });
   }
 };
+
+exports.getOne = {
+  handler: function (request, reply) {
+    User.findOne({ 'userId': request.params.userId }, function (err, user) {
+      if (!err) {
+        return reply(user);
+      }
+      return reply(Boom.badImplementation(err)); // 500 error
+    });
+  }
+};
