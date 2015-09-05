@@ -10,7 +10,10 @@ module.exports = [
         path:'/user/get/{firstname}',
         method:'GET',
         config: User.getOne
+    },
+    {
+        path:'/user/get',
+        method:'GET',
+        config: User.get
     }
-
-
 ];

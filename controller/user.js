@@ -36,3 +36,14 @@ exports.getOne = {
     });
   }
 };
+
+exports.get = {
+  handler: function (request, reply) {
+    User.find({}, function (err, user) {
+      if (!err) {
+        return reply(user);
+      }
+      return reply(Boom.badImplementation(err)); // 500 error
+    });
+  }
+};

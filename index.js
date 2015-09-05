@@ -1,5 +1,4 @@
 var Hapi = require('hapi');
-var Swig = require('swig');
 var handlerbars = require('handlebars');
 var Good = require('good');
 
@@ -53,6 +52,7 @@ server.register(
 
 var blocked = require('blocked');
 
+//testing plugins
 setInterval(function(){
     Array(1000).join('a')
 }, 500);
